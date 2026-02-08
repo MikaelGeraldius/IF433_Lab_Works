@@ -4,8 +4,9 @@ fun main() {
 
     val gameTitle: String = "Mobile Legends"
     val price: Int = 50000
+    var userNote: String? = null
 
-    printReceipt(gameTitle, calculateDiscount(price))
+    printReceipt(gameTitle, calculateDiscount(price), userNote)
 }
 
 fun calculateDiscount(price: Int): Int {
@@ -17,6 +18,7 @@ fun calculateDiscount(price: Int): Int {
     }
 }
 
-fun printReceipt(title: String, finalPrice: Int) {
-    println("Harga $title setelah diskon adalah $finalPrice")
+fun printReceipt(title: String, finalPrice: Int, note: String?) {
+    var displayNote:String = note ?: "Tidak ada catatan"
+    println("Harga $title setelah diskon adalah $finalPrice dan note: $displayNote")
 }
