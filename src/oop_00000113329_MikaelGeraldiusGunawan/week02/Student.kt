@@ -15,7 +15,7 @@ class Student (
         }
     }
 
-    constructor(name: String, nim: String, gpa: Double) : this(name, nim, major="Non-Matriculated", gpa){
+    constructor(name: String, nim: String) : this(name, nim, major="Non-Matriculated", gpa=0.0){
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
 }
