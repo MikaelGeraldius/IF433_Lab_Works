@@ -12,4 +12,8 @@ class Loan(
             0
         }
     }
+
+    constructor(bookTitle: String, borrower: String) : this(bookTitle, borrower, loanDuration = 1) {
+        println("Berhasil membuat buku")
+    }
 }
