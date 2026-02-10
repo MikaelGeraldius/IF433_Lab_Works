@@ -4,21 +4,21 @@ fun main() {
 
     val gameTitle: String = "Mobile Legends"
     val price: Int = 50000
-    var userNote: String? = null
+    val userNote: String? = null
 
-    printReceipt(gameTitle, calculateDiscount(price), userNote)
+    printReceipt(title = gameTitle, finalPrice = calculateDiscount(price), userNote)
 }
 
 fun calculateDiscount(price: Int): Int {
-    if (price > 500000) {
-        return price - (price * 0.20).toInt()
+    return if (price > 500000) {
+        price - (price * 0.20).toInt()
     }
     else {
-        return price - (price * 0.10).toInt()
+        price - (price * 0.10).toInt()
     }
 }
 
 fun printReceipt(title: String, finalPrice: Int, note: String?) {
-    var displayNote:String = note ?: "Tidak ada catatan"
+    val displayNote:String = note ?: "Tidak ada catatan"
     println("Harga $title setelah diskon adalah $finalPrice dan note: $displayNote")
 }
