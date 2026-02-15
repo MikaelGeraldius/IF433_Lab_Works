@@ -2,9 +2,15 @@ package oop_00000113329_MikaelGeraldiusGunawan.week02
 
 class Hero (
     val name: String,
-    var hp: Int,
-    var baseDamage: Int = 100
+    var baseDamage: Int,
+    var hp: Int = 100
 ) {
+    init {
+        println("Hero $name is created")
+        println("HP        : $hp")
+        println("BaseDamage: $baseDamage")
+    }
+
     fun attack(targetName: String) {
         println("$name attacked $targetName!")
     }
