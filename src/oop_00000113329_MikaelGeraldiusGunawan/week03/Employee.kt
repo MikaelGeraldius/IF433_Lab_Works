@@ -2,6 +2,9 @@ package oop_00000113329_MikaelGeraldiusGunawan.week03
 
 class Employee(var name: String) {
 
+    val tax: Double
+        get() = salary * 0.1
+
     var salary: Int = 0
         set(value) {
             if (value < 0) {
