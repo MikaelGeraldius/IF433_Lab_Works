@@ -1,8 +1,6 @@
 package oop_00000113329_MikaelGeraldiusGunawan.week05
 
-abstract class MathHelper() {
-    abstract fun hitungLuas()
-
+class MathHelper() {
     fun hitungLuas(sisi: Int): Int {
         return sisi * sisi
     }
