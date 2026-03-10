@@ -1,13 +1,13 @@
 package oop_00000113329_MikaelGeraldiusGunawan.week06
 
 class SmartHomeHub () {
-    val device = mutableListOf<SmartDevice>()
+    val devices = mutableListOf<SmartDevice>()
     fun addDevice(device: SmartDevice) {
-
+        devices.add(device)
     }
 
     fun turnOffAllSwitches() {
-        for (i in device) {
+        for (i in devices) {
             when (i) {
                 is Switchable -> {
                     i.turnOff()
@@ -17,7 +17,7 @@ class SmartHomeHub () {
     }
 
     fun activateSecurityMode() {
-        for (i in device) {
+        for (i in devices) {
             when (i) {
                 is Recordable -> {
                     i.startRecord()
