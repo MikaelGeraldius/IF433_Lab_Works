@@ -20,4 +20,5 @@ fun main() {
             println("Data korup: ${e.message}")
         }
     }
+    //berhasil
 }
