@@ -43,7 +43,9 @@ fun main() {
     println("\n=== TEST THE RED BUTTON (!!) ===")
     val toxicData: String? = null
     try {
-        val length = toxicData!!.length
+        val length = requireNotNull(toxicData) {
+            "Data tidak boleh null"
+        }
     } catch (e: NullPointerException) {
         println("CRASH (NPE)! Jangan gunkan !! secara sembarangan.")
     }
